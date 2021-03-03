@@ -5,7 +5,182 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
-		<link rel="stylesheet" href="css/style.css" />
+		<!-- <link rel="stylesheet" href="css/style.css" /> -->
+		<style>
+			body {
+				font-family: Arial;
+				font-weight: 400;
+				padding: 40px;
+				background-color: #fff;
+				max-width: 610px;
+				margin: auto;
+			}
+			body a {
+				text-decoration: none;
+				color: #db0c28;
+				cursor: pointer;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			header {
+				font-weight: 700;
+				font-size: 20px;
+				margin-bottom: 44px;
+			}
+
+			.manager {
+				display: flex;
+				margin-bottom: 90px;
+			}
+			.manager .photo {
+				margin-right: 33px;
+				width: 153px;
+				height: 153px;
+			}
+			.manager .photo img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			.manager .info {
+				font-size: 18px;
+				line-height: 133%;
+			}
+			.manager .info .name {
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 120%;
+				margin-bottom: 15px;
+			}
+			.manager .info .post {
+				color: #4f4f4f;
+			}
+			.manager .info a {
+				display: block;
+			}
+
+			.our-producers .title {
+				font-weight: 700;
+				margin-bottom: 15px;
+			}
+			.our-producers .cards {
+				display: flex;
+				justify-content: flex-start;
+				flex-wrap: wrap;
+				margin-right: -35px;
+			}
+			.our-producers .cards .card {
+				display: flex;
+				margin-right: 35px;
+				margin-bottom: 22px;
+			}
+			@media (max-width: 768px) {
+				.our-producers .title {
+					text-align: center;
+				}
+				.our-producers .cards {
+					flex-direction: column;
+					align-items: center;
+					margin-right: 0;
+				}
+				.our-producers .cards .card {
+					margin-right: 0;
+				}
+			}
+
+			footer {
+				line-height: 143%;
+			}
+			footer .logo {
+				width: 153px;
+				margin-bottom: 30px;
+				display: flex;
+			}
+			footer .logo img {
+				height: auto;
+				width: 153px;
+				object-fit: contain;
+			}
+			footer .requisites .row {
+				font-size: 14px;
+				color: #4f4f4f;
+			}
+			footer .requisites .row .key {
+				font-weight: 700;
+				margin-right: 3px;
+			}
+			footer .requisites .row .value {
+				margin-right: 5px;
+			}
+
+			body.medisign .manager {
+				margin-bottom: 40px;
+			}
+			body.medisign a {
+				color: #f37519;
+			}
+			body.medisign footer {
+				margin-top: 30px;
+				padding-top: 35px;
+				border-top: 1px solid #f37519;
+				display: flex;
+				align-items: flex-start;
+			}
+			body.medisign footer .logo {
+				margin-right: 33px;
+				flex-shrink: 0;
+			}
+			body.medisign footer .requisites > span {
+				color: #4f4f4f;
+				margin-bottom: 20px;
+				display: block;
+				font-size: 14px;
+			}
+			@media (max-width: 768px) {
+				body.medisign footer {
+					flex-direction: column;
+				}
+				body.medisign footer .logo {
+					width: 100%;
+					margin-right: 0;
+					display: flex;
+					justify-content: center;
+				}
+			}
+
+			@media (max-width: 768px) {
+				body {
+					padding: 20px;
+				}
+
+				header {
+					margin-bottom: 20px;
+					text-align: center;
+				}
+
+				.manager {
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+					margin-bottom: 30px;
+				}
+				.manager .photo {
+					margin-bottom: 25px;
+					margin-right: 0;
+				}
+
+				footer .logo {
+					justify-content: center;
+					width: initial;
+				}
+				footer .requisites .row {
+					margin-bottom: 5px;
+				}
+			}
+		</style>
 	</head>
 	<body class="medisign">
 		<header>
@@ -14,39 +189,39 @@
 		<main>
 			<div class="manager">
 				<div class="photo">
-					<img src="assets/staff/medisign2.png" alt="" />
+					<img src="http://advamedics.ru/emails/assets/staff/medisign2.png" alt="" />
 				</div>
 				<div class="info">
 					<div class="name">Ольга Пронина</div>
 					<div class="post">Менеджер по работе с клиентами</div>
 					<a href="mailto:sale1@medisign.ru"> sale1@medisign.ru</a>
-					<a href="tel:+74957218988">+7 (495) 721-89-88</a>
+					<a href="tel:+7 (962) 911-34-38">+7 (962) 911-34-38</a>
 				</div>
 			</div>
 			<div class="our-producers">
 				<div class="title">Наши производители</div>
 				<div class="cards">
 					<div class="card">
-						<img src="assets/img/vendor-1.png" alt="" />
+						<img src="http://advamedics.ru/emails/assets/img/vendor-1.png" alt="" />
 					</div>
 					<div class="card">
-						<img src="assets/img/vendor-2.png" alt="" />
+						<img src="http://advamedics.ru/emails/assets/img/vendor-2.png" alt="" />
 					</div>
 					<div class="card">
-						<img src="assets/img/vendor-3.png" alt="" />
+						<img src="http://advamedics.ru/emails/assets/img/vendor-3.png" alt="" />
 					</div>
 					<div class="card">
-						<img src="assets/img/vendor-4.png" alt="" />
+						<img src="http://advamedics.ru/emails/assets/img/vendor-4.png" alt="" />
 					</div>
 					<div class="card">
-						<img src="assets/img/vendor-5.png" alt="" />
+						<img src="http://advamedics.ru/emails/assets/img/vendor-5.png" alt="" />
 					</div>
 				</div>
 			</div>
 		</main>
 		<footer>
 			<div class="logo">
-				<img src="assets/img/medisign-logo.png" alt="" />
+				<img src="http://advamedics.ru/emails/assets/img/medisign-logo.png" alt="" />
 			</div>
 			<div class="requisites">
 				<span> Высококачественные медицинские расходные материалы </span>
