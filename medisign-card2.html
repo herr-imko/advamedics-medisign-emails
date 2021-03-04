@@ -5,7 +5,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
-		<!-- <link rel="stylesheet" href="css/style.css" /> -->
 		<style>
 			body {
 				font-family: Arial;
@@ -25,17 +24,20 @@
 				box-sizing: border-box;
 			}
 
-			header {
+			.title {
 				font-weight: 700;
 				font-size: 20px;
 				margin-bottom: 44px;
 			}
 
 			.manager {
-				display: flex;
+				display: table;
+				vertical-align: top;
 				margin-bottom: 90px;
 			}
+
 			.manager .photo {
+				/* display: table-cell; */
 				margin-right: 33px;
 				width: 153px;
 				height: 153px;
@@ -46,6 +48,8 @@
 				object-fit: cover;
 			}
 			.manager .info {
+				vertical-align: top;
+				/* display: table-cell; */
 				font-size: 18px;
 				line-height: 133%;
 			}
@@ -67,28 +71,15 @@
 				margin-bottom: 15px;
 			}
 			.our-producers .cards {
-				display: flex;
+				display: table;
 				justify-content: flex-start;
 				flex-wrap: wrap;
 				margin-right: -35px;
 			}
 			.our-producers .cards .card {
-				display: flex;
-				margin-right: 35px;
-				margin-bottom: 22px;
-			}
-			@media (max-width: 768px) {
-				.our-producers .title {
-					text-align: center;
-				}
-				.our-producers .cards {
-					flex-direction: column;
-					align-items: center;
-					margin-right: 0;
-				}
-				.our-producers .cards .card {
-					margin-right: 0;
-				}
+				display: table-cell;
+				padding-right: 35px;
+				padding-bottom: 22px;
 			}
 
 			footer {
@@ -96,7 +87,7 @@
 			}
 			footer .logo {
 				width: 153px;
-				margin-bottom: 30px;
+				padding-bottom: 30px;
 				display: flex;
 			}
 			footer .logo img {
@@ -139,47 +130,6 @@
 				display: block;
 				font-size: 14px;
 			}
-			@media (max-width: 768px) {
-				body.medisign footer {
-					flex-direction: column;
-				}
-				body.medisign footer .logo {
-					width: 100%;
-					margin-right: 0;
-					display: flex;
-					justify-content: center;
-				}
-			}
-
-			@media (max-width: 768px) {
-				body {
-					padding: 20px;
-				}
-
-				header {
-					margin-bottom: 20px;
-					text-align: center;
-				}
-
-				.manager {
-					flex-direction: column;
-					align-items: center;
-					text-align: center;
-					margin-bottom: 30px;
-				}
-				.manager .photo {
-					margin-bottom: 25px;
-					margin-right: 0;
-				}
-
-				footer .logo {
-					justify-content: center;
-					width: initial;
-				}
-				footer .requisites .row {
-					margin-bottom: 5px;
-				}
-			}
 		</style>
 	</head>
 	<body class="medisign">
@@ -187,36 +137,47 @@
 			<div class="title">Ваш персональный менеджер</div>
 		</header>
 		<main>
-			<div class="manager">
-				<div class="photo">
-					<img src="http://advamedics.ru/emails/assets/staff/medisign2.png" alt="" />
-				</div>
-				<div class="info">
-					<div class="name">Ольга Пронина</div>
-					<div class="post">Менеджер по работе с клиентами</div>
-					<a href="mailto:sale1@medisign.ru"> sale1@medisign.ru</a>
-					<a href="tel:+7 (962) 911-34-38">+7 (962) 911-34-38</a>
-				</div>
-			</div>
+			<table class="manager">
+				<tr>
+					<td>
+						<div class="photo">
+							<img src="http://advamedics.ru/emails/assets/staff/medisign2.png" alt="" />
+						</div>
+					</td>
+					<td valign="top">
+						<div class="info">
+							<div class="name">Ольга Пронина</div>
+							<div class="post">Менеджер по работе с клиентами</div>
+							<a href="mailto:sale1@medisign.ru"> sale1@medisign.ru</a>
+							<a href="tel:+7 (962) 911-34-38">+7 (962) 911-34-38</a>
+						</div>
+					</td>
+				</tr>
+			</table>
 			<div class="our-producers">
 				<div class="title">Наши производители</div>
-				<div class="cards">
-					<div class="card">
-						<img src="http://advamedics.ru/emails/assets/img/vendor-1.png" alt="" />
-					</div>
-					<div class="card">
-						<img src="http://advamedics.ru/emails/assets/img/vendor-2.png" alt="" />
-					</div>
-					<div class="card">
-						<img src="http://advamedics.ru/emails/assets/img/vendor-3.png" alt="" />
-					</div>
-					<div class="card">
-						<img src="http://advamedics.ru/emails/assets/img/vendor-4.png" alt="" />
-					</div>
-					<div class="card">
-						<img src="http://advamedics.ru/emails/assets/img/vendor-5.png" alt="" />
-					</div>
-				</div>
+				<table class="cards">
+					<tr>
+						<td class="card">
+							<img src="http://advamedics.ru/emails/assets/img/vendor-1.png" alt="" />
+						</td>
+						<td class="card">
+							<img src="http://advamedics.ru/emails/assets/img/vendor-2.png" alt="" />
+						</td>
+						<td class="card">
+							<img src="http://advamedics.ru/emails/assets/img/vendor-3.png" alt="" />
+						</td>
+					</tr>
+
+					<tr>
+						<td class="card">
+							<img src="http://advamedics.ru/emails/assets/img/vendor-4.png" alt="" />
+						</td>
+						<td class="card">
+							<img src="http://advamedics.ru/emails/assets/img/vendor-5.png" alt="" />
+						</td>
+					</tr>
+				</table>
 			</div>
 		</main>
 		<footer>
